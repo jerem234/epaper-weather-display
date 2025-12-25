@@ -32,9 +32,9 @@ source venv/bin/activate
 pip install RPi.GPIO spidev Pillow requests python-dotenv
 ```
 ### 3. Drivers & Fonts
-Ensure the waveshare_epd driver library is in the root folder. You will also need the following font files in the project root:
-```font.ttf```: For numeric and text data.
-```weathericons.ttf```: For weather condition graphics.
+Ensure the waveshare_epd driver library is in the root folder. You will also need the following font files in the project root:  
+```font.ttf```: For numeric and text data.  
+```weathericons.ttf```: For weather condition graphics.  
 
 ### 4. Environment Variables
 Create a .env file in the root directory and fill in your openweather api key and city/state.
