@@ -6,6 +6,7 @@ from PIL import Image, ImageDraw, ImageFont
 from waveshare_epd import epd2in13_V4
 from dotenv import load_dotenv
 # --- CONFIGURATION ---
+load_dotenv()
 API_KEY = os.getenv("API_KEY")
 CITY = os.getenv("CITY")
 UNITS = "imperial" 
