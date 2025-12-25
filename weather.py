@@ -4,10 +4,10 @@ import time
 import requests
 from PIL import Image, ImageDraw, ImageFont
 from waveshare_epd import epd2in13_V4
-
+from dotenv import load_dotenv
 # --- CONFIGURATION ---
-API_KEY = "d89325250240d68432bb9a74e884f925"
-CITY = "Nashville,TN,US"
+API_KEY = os.getenv("API_KEY")
+CITY = os.getenv("CITY")
 UNITS = "imperial" 
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
