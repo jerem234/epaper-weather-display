@@ -62,11 +62,10 @@ def draw_screen(epd, data):
     font_icon = ImageFont.truetype(ICON_FILE, 65)
 
 # Header
+	#date on top
     draw.text((10, 5), time.strftime("%b %d, %Y"), font=font_city, fill=0)
-    # High/Low on the right
-    	# Format: H: 75 L: 45
+    # High/Low below date | Format: H: 75 L: 45
     hi_lo_text = f"H: {data['temp_max']}° L: {data['temp_min']}°"
-    
     draw.text((10, 20), hi_lo_text, font=font_city, fill=0)
     # Big Temp
     draw.text((10, 30), f"{data['temp']}°", font=font_temp, fill=0)
@@ -85,7 +84,7 @@ def draw_screen(epd, data):
     # Find icon based on ID, default to a '?' icon (\uf03e) if not found
     icon_char = icon_map.get(data['id'], "\uf03e")
     
-    # Position: X=165 (far right area), Y=35 (aligned with temp)
+    # Position: X=165 (far right area), Y=30 (aligned with temp)
     draw.text((165, 30), icon_char, font=font_icon, fill=0)
     # Precipitation Text
     precip = "0%"
