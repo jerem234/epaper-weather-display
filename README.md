@@ -51,6 +51,8 @@ sudo systemctl start weather.service
 ```
 
 ## Acknowledgments
-[OpenWeatherMap API](https://openweathermap.org/api) for the data.
-[Waveshare](https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT+) for the display drivers.
-[Erik Flowers](https://github.com/erikflowers/weather-icons) for the weather icon font.
+[OpenWeatherMap API](https://openweathermap.org/api) for the data.  
+[Waveshare](https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT+) for the display drivers.  
+[Erik Flowers](https://github.com/erikflowers/weather-icons) for the weather icon font.  
+
+If you need any help ask AI. It created this whole thing anyways.
