@@ -29,7 +29,7 @@ git clone [https://github.com/jerem234/epaper-weather-display.git](https://githu
 cd epaper-weather-display
 python3 -m venv venv
 source venv/bin/activate
-pip install RPi.GPIO spidev Pillow requests python-dotenv gpiozero lgpio libopenjp2-7
+pip install RPi.GPIO spidev Pillow requests python-dotenv gpiozero lgpio libopenjp2-7 libfreetype6 libfreetype6-dev
 ```
 ### 3. Drivers & Fonts
 Ensure the waveshare_epd driver library is in the root folder. You will also need the following font files in the project root:  
@@ -42,7 +42,21 @@ Look at .env.example for reference. Make sure the actual file is named ```.env``
 
 This script is designed to run as a background service.
 1. Create the service file: ```sudo nano /etc/systemd/system/weather.service```
-2. Configure it to use your virtual environment's Python path: ```ExecStart=/home/<USER>/weather_display/venv/bin/python3 weather.py```
+2. Configure it to use your virtual environment's Python path: ```
+[Unit]
+Description=E-Paper Weather Display
+After=network-online.target
+
+[Service]
+Type=simple
+User=YOUR_USERNAME
+WorkingDirectory=/home/YOUR_USERNAME/epaper-weather-display
+ExecStart=/home/YOUR_USERNAME/venv/bin/python /home/YOUR_USERNAME/epaper-weather-display/main.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
 3. Enable and start:
 ```
 sudo systemctl daemon-reload
