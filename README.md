@@ -42,7 +42,8 @@ Look at .env.example for reference. Make sure the actual file is named ```.env``
 
 This script is designed to run as a background service.
 1. Create the service file: ```sudo nano /etc/systemd/system/weather.service```
-2. Configure it to use your virtual environment's Python path: ```
+2. Configure it to use your virtual environment's Python path:
+```
 [Unit]
 Description=E-Paper Weather Display
 After=network-online.target
