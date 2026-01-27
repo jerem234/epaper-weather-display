@@ -29,7 +29,7 @@ git clone [https://github.com/jerem234/epaper-weather-display.git](https://githu
 cd epaper-weather-display
 python3 -m venv venv
 source venv/bin/activate
-pip install RPi.GPIO spidev Pillow requests python-dotenv
+pip install RPi.GPIO spidev Pillow requests python-dotenv gpiozero lgpio libopenjp2-7
 ```
 ### 3. Drivers & Fonts
 Ensure the waveshare_epd driver library is in the root folder. You will also need the following font files in the project root:  
