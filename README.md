@@ -25,7 +25,7 @@ Interface Options -> SPI -> Yes
 
 ### 2. Clone the repository and set up your Python environment:
 ```
-git clone [https://github.com/jerem234/epaper-weather-display.git](https://github.com/jerem234/epaper-weather-display.git)
+git clone https://github.com/jerem234/epaper-weather-display.git
 cd epaper-weather-display
 python3 -m venv venv
 source venv/bin/activate
