@@ -1,0 +1,10 @@
+RPi.GPIO
+spidev
+Pillow
+requests
+python-dotenv
+gpiozero
+lgpio
+libopenjp2-7
+libfreetype6
+libfreetype6-dev
